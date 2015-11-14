@@ -1,0 +1,103 @@
+Laboration 1, syntaktisk analys
+---
+
+Förberedelser
+---
+1. Kopiera allt innehåll från mappen: done
+2. Starta SWI-prolog: done
+3. Ladda labbprogrammet: done
+
+Deluppgift 1, Testa grammatiken
+---
+1. Studera grammatiken i grammar1.pl
+Är meningen "hon målade en tavla med en pensel" grammatisk?
+	pron v det n prep det n
+	ja
+"hon målade en tavla i garaget"?
+	pron v det n prep n
+	ja
+"hon målade med en pensel i garaget"?
+	pron v prep det n prep n
+	nej
+2. Ladda grammatiken
+Done.
+
+3. Testa hypoteser
+Verkar stämma, men det är problem med teckenkodningen.
+Ändrade "målade" till "malade".
+Mina hypoteser stämmer.
+
+Deluppgift 2, prepositionsfraser
+---
+Även här ändrar jag "målade" till "malade"
+
+1. Ladda grammatiken.
+Done
+
+2. Vilka tolkningar av meningen representerar träden?
+         |
+         s
+         |
+  +--------------+
+  |              |
+  |             vp
+  |              |
+  |       +-------------+
+  |       |             |
+  |       |            np
+  |       |             |
+  |       |     +-----+---------+
+  |       |     |     |         |
+  |       |     |     |        pp
+  |       |     |     |         |
+  |       |     |     |     +--------+
+  |       |     |     |     |        |
+  |       |     |     |     |       np
+ np       |     |     |     |        |
+  |       |     |     |     |     +------+
+  |       |     |     |     |     |      |
+ pron     v    det    n    prep  det     n
+  |       |     |     |     |     |      |
+  |       |     |     |     |     |      |
+ hon   malade  en   tavla  med   en   pensel
+
+T = s(np(pron(hon)), vp(v(malade), np(det(en), n(tavla), pp(prep(med), np(det(en), n(pensel))))))
+
+T = s(np(pron(hon)), vp(v(malade), np(det(en), n(tavla), pp(prep(med), np(det(en), n(pensel)))))) ;
+           |
+           s
+           |
+  +------------------+
+  |                  |
+  |                 vp
+  |                  |
+  |       +--------+------------+
+  |       |        |            |
+  |       |       np           pp
+  |       |        |            |
+  |       |        |        +--------+
+  |       |        |        |        |
+  |       |        |        |       np
+ np       |        |        |        |
+  |       |     +-----+     |     +------+
+  |       |     |     |     |     |      |
+ pron     v    det    n    prep  det     n
+  |       |     |     |     |     |      |
+  |       |     |     |     |     |      |
+ hon   malade  en   tavla  med   en   pensel
+
+T = s(np(pron(hon)), vp(v(malade), np(det(en), n(tavla)), pp(prep(med), np(det(en), n(pensel)))))
+
+Första tolkningen är att hon målade en tavla med en pensel som verktyg.
+Den andra tolkningen är att hon målade en tavla som föreställer en pensel.
+
+4. Fråga (2) för "hon målade en tavla med en pensel i garaget"
+Tolkning 1: en person står i ett garage och målar en tavla med en pensel som verktyg
+Tolkning 2: en person står i ett garage och målar en tavla om föreställer en pensel
+Tolkning 3: en person målar en tavla som föreställer en pensel i garaget
+
+5. Fråga (2) för "hon målade en tavla med en pensel i garaget bakom huset"
+Tolkning 1: personen befinner sig i garaget bakom huset och målar en tavla med en pensel som verktyg
+Tolkning 2: personen befinner sig bakom huset och målar en tavla som föreställer en pensel i garaget
+Tolkning 3: personen målar en tavla som föreställer en pensel i garaget bakom huset
+---
