@@ -101,3 +101,24 @@ Tolkning 1: personen befinner sig i garaget bakom huset och målar en tavla med 
 Tolkning 2: personen befinner sig bakom huset och målar en tavla som föreställer en pensel i garaget
 Tolkning 3: personen målar en tavla som föreställer en pensel i garaget bakom huset
 ---
+
+Deluppgift 3, kongruens
+---
+Började med att fixa teckenkodningen, som innan.
+
+1. Ladda grammatiken: done
+
+2. Förse grammatiken med extra argument: done
+
+3. Ändra reglerna för np (regler som representerar genus): done
+
+4. Testa att de nya reglerna funkar: done
+Warning: /afs/nada.kth.se/home/h/u1ugof4h/spraktek_lab1/syntax/grammar3.pl:11:
+	Clauses of np/2 are not together in the source-file -- fixat
+ROR: np/2: Undefined procedure: jj/3
+ERROR:   However, there are definitions for:
+ERROR:         jj/2
+   Exception: (9) jj(neutrum, [gammalt, bord], _G191) ? creep
+   Exception: (8) np([ett, gammalt, bord], []) ? creep -- fixat
+
+5. Utöka grammatiken med särdrag tills alla korrekta fraser kan härledas ur grammatiken, och inga inkorrekta fraser kan härledas ur grammatiken. 
