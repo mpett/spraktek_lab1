@@ -122,3 +122,4 @@ ERROR:         jj/2
    Exception: (8) np([ett, gammalt, bord], []) ? creep -- fixat
 
 5. Utöka grammatiken med särdrag tills alla korrekta fraser kan härledas ur grammatiken, och inga inkorrekta fraser kan härledas ur grammatiken. 
+Fixade teckenkodningen.

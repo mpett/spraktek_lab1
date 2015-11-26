@@ -1,76 +1,84 @@
 % Grammatikregler
 s --> np.
 
-np --> det(Genus), jj(Genus), n.
-np --> det(Genus), jj(Genus), n, n.
+np --> det(Genus, Numerus), jj(Genus, Numerus), n(Genus, Numerus).
+np --> det(Genus, Numerus), jj(Genus, Numerus), n(Genus, Numerus), n(Genus, Numerus).
 
 % Lexikon
-det(utrum) --> [ den ].
-det(neutrum) --> [ det ].
-det(utrum) --> [ nagra ].
-det(neutrum) --> [ nagra ].
-det(utrum) --> [ de ].
-det(neutrum) --> [ de ].
-det(utrum) --> [ en ].
-det(neutrum) --> [ ett ].
+det(utrum, singularis) --> [ den ].
+det(neutrum, singularis) --> [ den ].
+det(neutrum, singularis) --> [ det ].
+det(utrum, singularis) --> [ det ].
+det(utrum, pluralis) --> [ nagra ].
+det(neutrum, pluralis) --> [ nagra ].
+det(utrum, pluralis) --> [ de ].
+det(neutrum, pluralis) --> [ de ].
+det(utrum, singularis) --> [ en ].
+det(neutrum, singularis) --> [ ett ].
 
-jj(utrum) --> [ gammal ].
-jj(neutrum) --> [ gammalt ].
-jj(utrum) --> [ gamle ].
-jj(neutrum) --> [ gamla ].
+jj(utrum, singularis) --> [ gammal ].
+jj(neutrum, singularis) --> [ gammalt ].
+jj(utrum, pluralis) --> [ gamle ].
+jj(neutrum, singularis) --> [ gamle ].
+jj(neutrum,pluralis) --> [ gamla ].
+jj(utrum,pluralis) --> [ gamla ].
+jj(utrum,singularis) --> [ gamla ].
 
-jj(utrum) --> [ rod ].
-jj(neutrum) --> [ rott ].
-jj(utrum) --> [ rode ].
-jj(neutrum) --> [ roda ].
+jj(utrum, singularis) --> [ rod ].
+jj(neutrum, singularis) --> [ rott ].
+jj(utrum, singularis) --> [ rode ].
+jj(neutrum, pluralis) --> [ roda ].
+jj(neutrum, singularis) --> [ roda ].
 
-n --> [ man ].
-n --> [ mannen ].
-n --> [ maan ].
-n --> [ mannen ].
-n --> [ mans ].
-n --> [ mannens ].
-n --> [ maans ].
-n --> [ maannens ].
 
-n --> [ kvinna ].
-n --> [ kvinnan ].
-n --> [ kvinnor ].
-n --> [ kvinnorna ].
-n --> [ kvinnas ].
-n --> [ kvinnans ].
-n --> [ kvinnors ].
-n --> [ kvinnornas ].
+n(neutrum, singularis) --> [ man ].
+n(neutrum, singularis) --> [ mannen ].
+n(neutrum, pluralis) --> [ maan ].
+n(neutrum, singularis) --> [ mannen ].
+n(neutrum, singularis) --> [ mans ].
+n(neutrum, singularis) --> [ mannens ].
+n(neutrum, pluralis) --> [ maans ].
+n(neutrum, pluralis) --> [ maannens ].
+n(neutrum, pluralis) --> [ maannen ].
 
-n --> [ bord ].
-n --> [ bordet ].
-n --> [ borden ].
-n --> [ bords ].
-n --> [ bordets ].
-n --> [ bordens ].
+n(utrum, singularis) --> [ kvinna ].
+n(utrum, singularis) --> [ kvinnan ].
+n(utrum, pluralis) --> [ kvinnor ].
+n(utrum, pluralis) --> [ kvinnorna ].
+n(utrum, singularis) --> [ kvinnas ].
+n(utrum, singularis) --> [ kvinnans ].
+n(utrum, pluralis) --> [ kvinnors ].
+n(utrum, pluralis) --> [ kvinnornas ].
 
-n --> [ skal ].
-n --> [ skalet ].
-n --> [ skalen ].
-n --> [ skals ].
-n --> [ skalets ].
-n --> [ skalens ].
+n(neutrum, singularis) --> [ bord ].
+n(neutrum, singularis) --> [ bordet ].
+n(neutrum, pluralis) --> [ borden ].
+n(neutrum, singularis) --> [ bords ].
+n(neutrum, singularis) --> [ bordets ].
+n(neutrum, pluralis) --> [ bordens ].
 
-n --> [ apple].
-n --> [ applet ].
-n --> [ applen ].
-n --> [ applena ].
-n --> [ apples ].
-n --> [ applets ].
-n --> [ applens ].
-n --> [ applenas ].
+n(neutrum, singularis) --> [ skal ].
+n(neutrum, singularis) --> [ skalet ].
+n(neutrum, pluralis) --> [ skalen ].
+n(neutrum, singularis) --> [ skals ].
+n(neutrum, singularis) --> [ skalets ].
+n(neutrum, pluralis) --> [ skalens ].
 
-n --> [ kant ].
-n --> [ kanten ].
-n --> [ kanter ].
-n --> [ kanterna ].
-n --> [ kants ].
-n --> [ kantens ].
-n --> [ kanters ].
-n --> [ kanternas ].
+n(neutrum, singularis) --> [ apple].
+n(neutrum, singularis) --> [ applet ].
+n(neutrum, pluralis) --> [ applen ].
+n(neutrum, pluralis) --> [ applena ].
+n(neutrum, singularis) --> [ apples ].
+n(neutrum, singularis) --> [ applets ].
+n(neutrum, pluralis) --> [ applens ].
+n(neutrum, pluralis) --> [ applenas ].
+
+n(utrum, singularis) --> [ kant ].
+n(utrum, singularis) --> [ kanten ].
+n(utrum, pluralis) --> [ kanter ].
+n(utrum, pluralis) --> [ kanterna ].
+n(utrum, singularis) --> [ kants ].
+n(utrum, singularis) --> [ kantens ].
+n(utrum, pluralis) --> [ kanters ].
+n(utrum, pluralis) --> [ kanternas ].
 
