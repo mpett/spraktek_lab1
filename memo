@@ -123,3 +123,5 @@ ERROR:         jj/2
 
 5. Utöka grammatiken med särdrag tills alla korrekta fraser kan härledas ur grammatiken, och inga inkorrekta fraser kan härledas ur grammatiken. 
 Fixade teckenkodningen.
+Första stora felet med min grammatik är att den saknar stöd för genitiv.
+Har lagt till regler för kasus, species.
