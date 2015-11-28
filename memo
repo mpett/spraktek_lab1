@@ -125,3 +125,4 @@ ERROR:         jj/2
 Fixade teckenkodningen.
 Första stora felet med min grammatik är att den saknar stöd för genitiv.
 Har lagt till regler för kasus, species.
+Fixade äntligen klart labben; lade till regler för maskulina och feminina substantiv samt för indefinita substantiv efter genitiv.
